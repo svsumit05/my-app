@@ -1,0 +1,36 @@
+Step 1: Personal Details
+
+- use Interfce  to bind all form properties
+- Form binding done with (firstName,lastName,Email,Mobile,Dob)
+- Form validation/error messages done with all fields on click of     	Submit buttion
+- when all form fields are validate then only navigate to 	  	occupation detail page
+- Use DataService to store person data before navigate to next page
+
+
+Step 2: Occupation Details
+
+- use Interfce to bind autocomplete properties
+- create static JSON data of company list with (id,name,address) fields
+- Angular material autoComplete used to list company data
+- filter and search datafrom list when we type text inside autocomplete 
+- if not select any value and click on next then it will show snackbar message to fill up autocomplete
+- arrow button will navigate to loan detail page
+- Use DataService to store occupation data before navigate to next page
+
+
+ Step 3: Loan Details
+
+- Angular material slider used for total Loan Amount and existing emi slider
+- min value for both the slider is 10k and max value is 50L
+- use Currency pipe filter to show Amount in rupees
+- arrow button will navigate to conclusion page
+- Use DataService to store loan data before navigate to next page
+
+
+
+Step 4 : Conclusion (Fetch all 3 pages data by using Service)
+
+- fetch all 3 pages data from service and bind in html
+
+
+ 

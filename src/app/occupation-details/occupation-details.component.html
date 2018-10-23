@@ -1,0 +1,19 @@
+<div class="example-container">
+  <h1>What is Your Companys Name </h1>
+
+  <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <input type="text" placeholder="select Company" aria-label="Number" matInput [formControl]="companyDetailControl" [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayCompanyName">
+          <mat-option *ngFor="let option of filteredCompanyDetailList | async" [value]="option">
+            {{option.name}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </form>
+    <button mat-icon-button (click)="nextStep()"><mat-icon>arrow_forward_ios</mat-icon></button>
+    
+
+  
+  </div>
+  

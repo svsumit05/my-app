@@ -1,0 +1,50 @@
+<div class="jumbotron">
+<div class="container">
+<div class="row">
+<div class="col-md-6 offset-md-3">
+<h3>Personal Details</h3>
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+<div class="form-group">
+<label>First Name</label>
+<input type="text" formControlName="firstName" class="form-control" [(ngModel)]="personDetai.firstName" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+<div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+<div *ngIf="f.firstName.errors.required">First Name is required</div>
+</div>
+</div>
+<div class="form-group">
+<label>Last Name</label>
+<input type="text" formControlName="lastName" class="form-control" [(ngModel)]="personDetail.lastName" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+<div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+<div *ngIf="f.lastName.errors.required">Last Name is required</div>
+</div>
+</div>
+<div class="form-group">
+<label>Email</label>
+<input type="text" formControlName="email" class="form-control" [(ngModel)]="personDetail.email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+<div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+<div *ngIf="f.email.errors.required">Email is required</div>
+<div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+</div>
+</div>
+<div class="form-group">
+<label>Mobile</label>
+<input type="text" formControlName="mobile" class="form-control" [(ngModel)]="personDetail.mobile" [ngClass]="{ 'is-invalid': submitted && f.mobile.errors }" />
+<div *ngIf="submitted && f.mobile.errors" class="invalid-feedback">
+<div *ngIf="f.mobile.errors.required">mobile is required</div>
+</div>
+</div>
+<div class="form-group">
+<label>dob</label>
+<input type="date" formControlName="dob" class="form-control" [(ngModel)]="personDetail.dob" [ngClass]="{ 'is-invalid': submitted && f.dob.errors }" />
+<div *ngIf="submitted && f.dob.errors" class="invalid-feedback">
+<div *ngIf="f.dob.errors.required">dob is required</div>
+</div>
+</div>
+<div class="form-group">
+<button class="btn btn-primary">Submit</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>

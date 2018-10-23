@@ -1,0 +1,32 @@
+<mat-grid-list cols="3" rowHeight="1:1">
+  <mat-grid-tile>
+      <mat-list>
+          <mat-list-item> <h1> Total Loan Amount</h1> </mat-list-item>
+          <mat-list-item> <h1> {{loanValue.totalAmount | currency :'INR':true}}</h1> </mat-list-item>
+          <mat-list-item> <mat-slider
+            thumbLabel
+            [displayWith]="formatLabel"
+            tickInterval="1"
+            [(ngModel)]="loanValue.totalAmount"
+            min="10000"
+            max="5000000"></mat-slider> </mat-list-item>
+         </mat-list>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+      <mat-list>
+          <mat-list-item>
+    <h1> Existing EMI</h1></mat-list-item>
+    <mat-list-item> <h1> {{loanValue.existingAmount | currency :'INR':true}}</h1></mat-list-item>
+  
+    <mat-list-item> <mat-slider
+      thumbLabel
+      [displayWith]="formatLabel"
+      tickInterval="1"
+      [(ngModel)]="loanValue.existingAmount"
+      min="10000"
+      max="5000000"></mat-slider></mat-list-item>
+    </mat-list>
+  </mat-grid-tile>
+  <mat-grid-tile><button mat-icon-button (click)="nextStepConclusion()"><mat-icon>arrow_forward_ios</mat-icon></button></mat-grid-tile>
+</mat-grid-list>
